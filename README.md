@@ -15,9 +15,14 @@ Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关。网页里�
 
 ## 安装
 
+- **Greasy Fork（推荐）**：<https://greasyfork.org/zh-CN/scripts/607067>
+- **直接装 GitHub 版本（raw）**：
+  <https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/edge-android-two-finger-fullscreen.user.js>
+
+步骤：
+
 1. 在 Edge for Android 中安装用户脚本管理器（推荐 [Tampermonkey 篡改猴](https://microsoftedge.microsoft.com/addons)）。
-2. 打开本脚本的 raw 地址安装：
-   <https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/edge-android-two-finger-fullscreen.user.js>
+2. 打开上面任一链接点击安装。
 3. 或在篡改猴里「添加新脚本…」，把脚本内容整段粘贴进去并保存。
 
 ## 用法

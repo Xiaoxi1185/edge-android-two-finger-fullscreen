@@ -1,0 +1,66 @@
+[
+  {
+    "name": ".gitattributes",
+    "path": ".gitattributes",
+    "sha": "32f79faa508c179c728b93ec43ed7b083ffc3707",
+    "size": 41,
+    "url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/.gitattributes?ref=main",
+    "html_url": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/.gitattributes",
+    "git_url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/32f79faa508c179c728b93ec43ed7b083ffc3707",
+    "download_url": "https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/.gitattributes",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/.gitattributes?ref=main",
+      "git": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/32f79faa508c179c728b93ec43ed7b083ffc3707",
+      "html": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/.gitattributes"
+    }
+  },
+  {
+    "name": "LICENSE",
+    "path": "LICENSE",
+    "sha": "e7ec5a65315423a81f3bfa705eebc8aacedfde07",
+    "size": 1067,
+    "url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/LICENSE?ref=main",
+    "html_url": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/LICENSE",
+    "git_url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/e7ec5a65315423a81f3bfa705eebc8aacedfde07",
+    "download_url": "https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/LICENSE",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/LICENSE?ref=main",
+      "git": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/e7ec5a65315423a81f3bfa705eebc8aacedfde07",
+      "html": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/LICENSE"
+    }
+  },
+  {
+    "name": "README.md",
+    "path": "README.md",
+    "sha": "6a71774dda10b417f3a448f17a4af308f010859a",
+    "size": 3700,
+    "url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/README.md?ref=main",
+    "html_url": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/README.md",
+    "git_url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/6a71774dda10b417f3a448f17a4af308f010859a",
+    "download_url": "https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/README.md",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/README.md?ref=main",
+      "git": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/6a71774dda10b417f3a448f17a4af308f010859a",
+      "html": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/README.md"
+    }
+  },
+  {
+    "name": "edge-android-two-finger-fullscreen.user.js",
+    "path": "edge-android-two-finger-fullscreen.user.js",
+    "sha": "ea4b96cc8234b4c2aeec9e5c94a47de4a7d9d575",
+    "size": 3511,
+    "url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/edge-android-two-finger-fullscreen.user.js?ref=main",
+    "html_url": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/edge-android-two-finger-fullscreen.user.js",
+    "git_url": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/ea4b96cc8234b4c2aeec9e5c94a47de4a7d9d575",
+    "download_url": "https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/edge-android-two-finger-fullscreen.user.js",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/contents/edge-android-two-finger-fullscreen.user.js?ref=main",
+      "git": "https://api.github.com/repos/Xiaoxi1185/edge-android-two-finger-fullscreen/git/blobs/ea4b96cc8234b4c2aeec9e5c94a47de4a7d9d575",
+      "html": "https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen/blob/main/edge-android-two-finger-fullscreen.user.js"
+    }
+  }
+]
