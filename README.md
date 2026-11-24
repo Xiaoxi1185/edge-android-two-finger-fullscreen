@@ -8,7 +8,7 @@
 
 ## 为什么需要它
 
-Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关。网页里的悬浮按钮方案虽然能全屏，但按钮长期挡在内容上；而"从扩展面板点一下"技术上不可行：
+Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关：
 
 - `Element.requestFullscreen()` 必须由**页面内的真实用户手势**触发。无手势调用会直接抛 `TypeError: Permissions check failed`，扩展面板、油猴菜单、后台脚本代点都过不了这道检查。
 - Android 版篡改猴的弹出面板**不渲染** `GM_registerMenuCommand` 注册的命令（实测只有"编辑 / 报告 Bug / 排除本站 / 删除"）。
