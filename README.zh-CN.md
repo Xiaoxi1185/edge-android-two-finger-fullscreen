@@ -17,7 +17,7 @@ Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关：
 
 ## 安装
 
-- **Greasy Fork（推荐）**：<https://greasyfork.org/scripts/607067-edge-android-two-finger-tap-fullscreen>
+- **Greasy Fork（推荐）**：<https://greasyfork.org/scripts/607074-edge-android-two-finger-tap-fullscreen>
 - **直接装 GitHub 版本（raw）**：
   <https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/edge-android-two-finger-fullscreen.user.js>
 

@@ -17,7 +17,7 @@ Handing the "real tap" to a page gesture is therefore the cheapest approach that
 
 ## Install
 
-- **Greasy Fork (recommended)**: <https://greasyfork.org/scripts/607067-edge-android-two-finger-tap-fullscreen>
+- **Greasy Fork (recommended)**: <https://greasyfork.org/scripts/607074-edge-android-two-finger-tap-fullscreen>
 - **Direct from GitHub (raw)**:
   <https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/edge-android-two-finger-fullscreen.user.js>
 
