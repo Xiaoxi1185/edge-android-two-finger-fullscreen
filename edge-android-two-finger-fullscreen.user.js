@@ -2,9 +2,9 @@
 // @name         Edge Android 双指轻点全屏
 // @name:en      Edge Android Two-Finger Tap Fullscreen
 // @namespace    https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen
-// @version      3.2
-// @description  双指同时轻点页面 = 进入/退出全屏，无悬浮按钮，不改变屏幕方向
-// @description:en Toggle fullscreen in Edge for Android by tapping with two fingers. No floating button, no forced rotation.
+// @version      3.3
+// @description  双指同时轻点页面 = 进入/退出全屏，无悬浮按钮，不改变屏幕方向。由 DeepSeek-V4.1-Flash-1017 制作
+// @description:en Toggle fullscreen in Edge for Android by tapping with two fingers. No floating button, no forced rotation. Made with DeepSeek-V4.1-Flash-1017.
 // @author       Xiaoxi1185
 // @license      MIT
 // @homepageURL  https://github.com/Xiaoxi1185/edge-android-two-finger-fullscreen

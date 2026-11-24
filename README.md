@@ -1,6 +1,8 @@
 # Edge Android 双指轻点全屏
 
-在 **Android 版 Edge（含 Edge Canary）** 上，用 **双指同时轻点页面** 来切换全屏——不需要悬浮按钮，也不改动屏幕方向。
+在 **Android 版 Edge** 上，用 **双指同时轻点页面** 来切换全屏——不需要悬浮按钮，也不改动屏幕方向。
+
+> 由 **DeepSeek-V4.1-Flash-1017** 制作。
 
 > Toggle fullscreen in Edge for Android by tapping the page with two fingers. No floating button, no forced rotation.
 
@@ -49,7 +51,7 @@ Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关。网页里�
 在以下环境实测通过（真机验证，非仅静态检查）：
 
 - Xiaomi 25098PN5AC / Android 17 (SDK 37) / KernelSU root
-- Microsoft Edge Canary `160.0.4420.0`
+- Microsoft Edge `160.0.4420.0`
 - 篡改猴 `5.5.1`（MV3）
 
 同一套 API 在 Chrome for Android、Edge 稳定版、Firefox for Android 上同样可用；只要浏览器支持 `Element.requestFullscreen()` 即可。
@@ -61,6 +63,7 @@ Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关。网页里�
 
 ## 更新日志
 
+- `3.3` — 简介补充制作方信息，去掉多余的括号说明（脚本逻辑未变）。
 - `3.2` — 仅元数据调整：Greasy Fork 侧附加信息改用 Markdown 解析（脚本逻辑未变）。
 - `3.1` — 移除自动横屏锁定，屏幕方向完全交给系统。
 - `3.0` — 改为双指轻点手势，去掉悬浮按钮。
