@@ -1,78 +1,78 @@
-# Edge Android 双指轻点全屏
+# Edge Android Two-Finger Tap Fullscreen
 
-在 **Android 版 Edge** 上，用 **双指同时轻点页面** 来切换全屏——不需要悬浮按钮，也不改动屏幕方向。
+Toggle fullscreen in **Microsoft Edge for Android** by tapping the page with **two fingers** — no floating button, no forced rotation.
 
-> 由 **DeepSeek-V4.1-Flash-1017** 制作。
+> Made with **DeepSeek-V4.1-Flash-1017**.
 
-> Toggle fullscreen in Edge for Android by tapping the page with two fingers. No floating button, no forced rotation.
+> 中文说明：[README.zh-CN.md](README.zh-CN.md)
 
-## 为什么需要它
+## Why
 
-Android 版 Edge 没有类似桌面端 F11 的"整页全屏"开关：
+Edge for Android has no F11-style "full page" fullscreen toggle:
 
-- `Element.requestFullscreen()` 必须由**页面内的真实用户手势**触发。无手势调用会直接抛 `TypeError: Permissions check failed`，扩展面板、油猴菜单、后台脚本代点都过不了这道检查。
-- Android 版篡改猴的弹出面板**不渲染** `GM_registerMenuCommand` 注册的命令（实测只有"编辑 / 报告 Bug / 排除本站 / 删除"）。
+- `Element.requestFullscreen()` must be triggered by a **real user gesture inside the page**. Calling it without one throws `TypeError: Permissions check failed` — extension popups, userscript menus and background scripts cannot pass that check.
+- The Tampermonkey popup on Android **does not render** commands registered via `GM_registerMenuCommand` (it only shows "Edit / Report bug / Exclude site / Delete").
 
-所以把"真实点击"交给页面手势，是最省事、又不占屏幕的做法。
+Handing the "real tap" to a page gesture is therefore the cheapest approach that does not occupy the screen.
 
-## 安装
+## Install
 
-- **Greasy Fork（推荐）**：<https://greasyfork.org/zh-CN/scripts/607067>
-- **直接装 GitHub 版本（raw）**：
+- **Greasy Fork (recommended)**: <https://greasyfork.org/scripts/607067>
+- **Direct from GitHub (raw)**:
   <https://raw.githubusercontent.com/Xiaoxi1185/edge-android-two-finger-fullscreen/main/edge-android-two-finger-fullscreen.user.js>
 
-步骤：
+Steps:
 
-1. 在 Edge for Android 中安装用户脚本管理器（推荐 [Tampermonkey 篡改猴](https://microsoftedge.microsoft.com/addons)）。
-2. 打开上面任一链接点击安装。
-3. 或在篡改猴里「添加新脚本…」，把脚本内容整段粘贴进去并保存。
+1. Install a userscript manager in Edge for Android (e.g. [Tampermonkey](https://microsoftedge.microsoft.com/addons)).
+2. Open either link above and click install.
+3. Or use "Add new script…" in Tampermonkey and paste the whole script.
 
-## 用法
+## Usage
 
-| 操作 | 效果 |
+| Action | Result |
 |---|---|
-| **两根手指同时轻点**页面 | 进入全屏：地址栏、底部工具栏、状态栏、导航栏全部隐藏 |
-| **再双指轻点** | 退出全屏 |
+| **Tap the page with two fingers** | Enter fullscreen: address bar, bottom toolbar, status bar and navigation bar all hidden |
+| **Tap again with two fingers** | Leave fullscreen |
 
-- 是"轻点"：两指快速点一下就抬起，别按住不动，也别捏合缩放。
-- 判定阈值：两指位移均 < 18px、按下时长 < 350ms；超过则视为缩放/长按，不触发。
-- 全屏后想把屏幕转过来，直接转手机即可，系统会自动跟随，全屏状态保持。
-- 退出全屏也可以按返回键，或用 Edge 自带的退出提示。
+- It is a *tap*: both fingers down and up quickly — not a press-and-hold, not a pinch.
+- Thresholds: both fingers move < 18px and the touch lasts < 350ms; anything else is treated as zoom / long-press and ignored.
+- To read in landscape, just rotate the phone — the system follows and fullscreen is kept.
+- You can also leave fullscreen with the back button or Edge's own exit hint.
 
-## 实现要点
+## Implementation notes
 
-- 只监听 `touchstart / touchmove / touchend / touchcancel`（`passive: true`），不注册任何 DOM 元素、不注入样式，**页面上不留下任何痕迹**。
-- 通过 `document.documentElement` 的 `data-fs-*` 属性记录状态（`fsInstalled` / `fsTaps` / `fsResult`），便于排查，不影响页面。
-- 全屏调用带 `{ navigationUI: 'hide' }`，避免部分浏览器残留导航 UI。
-- 不使用 `screen.orientation.lock()`，不干预屏幕方向。
+- Only listens to `touchstart / touchmove / touchend / touchcancel` with `passive: true`. It creates no DOM nodes and injects no styles — **nothing is left on the page**.
+- State is recorded in `data-fs-*` attributes on `document.documentElement` (`fsInstalled` / `fsTaps` / `fsResult`) for troubleshooting, which does not affect the page.
+- The fullscreen call passes `{ navigationUI: 'hide' }` to avoid leftover navigation UI in some browsers.
+- `screen.orientation.lock()` is never used; screen orientation is left to the system.
 
-## 兼容性
+## Compatibility
 
-在以下环境实测通过（真机验证，非仅静态检查）：
+Verified on a real device (not just static review):
 
-- Xiaomi 25098PN5AC / Android 17 (SDK 37) / KernelSU root
+- Xiaomi 25098PN5AC / Android 17 (SDK 37)
 - Microsoft Edge `160.0.4420.0`
-- 篡改猴 `5.5.1`（MV3）
+- Tampermonkey `5.5.1` (MV3)
 
-同一套 API 在 Chrome for Android、Edge 稳定版、Firefox for Android 上同样可用；只要浏览器支持 `Element.requestFullscreen()` 即可。
+The same APIs work in Chrome for Android, Edge stable and Firefox for Android — any browser that implements `Element.requestFullscreen()`.
 
-## 局限
+## Limitations
 
-- 极少数自身拦截双指事件（做自定义缩放/手势）的站点可能触发不了，换个位置或先滚动一下再点。
-- 全屏是浏览器层面的全屏，页面若自带固定定位的导航栏，那是网页自己的元素，不会被隐藏。
+- A few sites intercept two-finger events for their own zoom/gestures; try another spot or scroll first.
+- Fullscreen is browser-level: a site's own fixed navigation bar is part of the page and will not be hidden.
 
-## 更新日志
+## Changelog
 
-- `3.3` — 简介补充制作方信息，去掉多余的括号说明（脚本逻辑未变）。
-- `3.2` — 仅元数据调整：Greasy Fork 侧附加信息改用 Markdown 解析（脚本逻辑未变）。
-- `3.1` — 移除自动横屏锁定，屏幕方向完全交给系统。
-- `3.0` — 改为双指轻点手势，去掉悬浮按钮。
-- `1.0` — 初版（菜单命令原型）。
+- `3.1` — Removed the automatic landscape lock; screen orientation is fully left to the system.
+- `3.0` — Switched to the two-finger tap gesture; removed the floating button.
+- `1.0` — Initial version (menu-command prototype).
 
-## 致谢
+Changes after `3.1` are documentation and metadata only (multi-language descriptions); the script logic is unchanged.
 
-思路参考了 Greasy Fork 上的 [Edge Android 全屏浏览 (可拖动按钮)](https://greasyfork.org/zh-CN/scripts/538073) 及其 [修复版](https://greasyfork.org/zh-CN/scripts/589200)（均为 MIT）：它们用悬浮按钮调用 `requestFullscreen`，本脚本改用页面手势以移除常驻按钮。
+## Credits
 
-## 许可证
+Inspired by [Edge Android 全屏浏览 (可拖动按钮)](https://greasyfork.org/scripts/538073) and its [fixed version](https://greasyfork.org/scripts/589200) on Greasy Fork (both MIT), which call `requestFullscreen` from a floating button. This script moves the trigger to a page gesture so no persistent button is needed.
+
+## License
 
 [MIT](LICENSE)
